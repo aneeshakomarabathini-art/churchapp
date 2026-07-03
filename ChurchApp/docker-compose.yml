@@ -1,0 +1,90 @@
+version: "3.9"
+
+services:
+
+  mysql:
+    image: mysql:8.4
+    container_name: church_mysql
+
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+    ports:
+      - "${MYSQL_PORT}:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    networks:
+      - church_network
+
+
+  backend:
+    build:
+      context: ./bibleapp
+
+    container_name: church_backend
+
+    restart: unless-stopped
+
+    depends_on:
+      - mysql
+
+    env_file:
+      - .env
+
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+      SPRING_JPA_SHOW_SQL: ${SPRING_JPA_SHOW_SQL}
+      SERVER_PORT: ${SERVER_PORT}
+
+    ports:
+      - "8080:8080"
+
+    networks:
+      - church_network
+
+
+  frontend:
+    build:
+      context: .
+
+    container_name: church_frontend
+
+    restart: unless-stopped
+
+    depends_on:
+      - backend
+
+    env_file:
+      - .env
+
+    environment:
+      API_BASE_URL: ${API_BASE_URL}
+
+    ports:
+      - "${FRONTEND_PORT}:8081"
+
+    networks:
+      - church_network
+
+
+volumes:
+
+  mysql_data:
+
+
+networks:
+
+  church_network:
