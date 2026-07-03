@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Church App",
+    "slug": "church-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#FAFAF7",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.churchapp.mobile"
+    },
+    "android": {
+      "package": "com.churchapp.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FAFAF7"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": []
+  }
+}
