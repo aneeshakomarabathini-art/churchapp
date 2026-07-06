@@ -11,7 +11,9 @@
       "backgroundColor": "#FAFAF7",
       "resizeMode": "contain"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.churchapp.mobile"
@@ -26,6 +28,11 @@
     "web": {
       "bundler": "metro"
     },
-    "plugins": []
+    "plugins": [],
+    "extra": {
+      "eas": {
+        "projectId": "94db04e0-8067-41e8-bded-a0e2dcd2e974"
+      }
+    }
   }
 }
