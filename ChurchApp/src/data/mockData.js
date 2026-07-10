@@ -1,0 +1,98 @@
+export const bibleVersions = [
+  { id: 'kjv', short: 'KJV', name: 'King James Version' },
+  { id: 'nasb', short: 'NASB', name: 'New American Standard Bible' },
+  { id: 'esv', short: 'ESV', name: 'English Standard Version' },
+  { id: 'niv', short: 'NIV', name: 'New International Version' },
+];
+
+export const highlightColors = [
+  { id: 'yellow', color: '#FFD60A', name: 'Yellow' },
+  { id: 'green', color: '#52B788', name: 'Green' },
+  { id: 'blue', color: '#1D6DEE', name: 'Blue' },
+  { id: 'pink', color: '#FF69B4', name: 'Pink' },
+  { id: 'orange', color: '#FF8C42', name: 'Orange' },
+];
+
+export const churches = [
+  {
+    id: 1,
+    name: 'Grace Community Church',
+    location: 'Hyderabad, Telangana',
+    address: '123 Church Street, Hyderabad',
+    phone: '+91-9876543210',
+    email: 'info@gracechurch.com',
+    timing: '9:00 AM - 10:30 AM, 5:00 PM - 6:30 PM',
+    members: 450,
+    image: '🏛️',
+    featured: true,
+  },
+  {
+    id: 2,
+    name: 'Living Word Assembly',
+    location: 'Secunderabad, Telangana',
+    address: '456 Gospel Road, Secunderabad',
+    phone: '+91-9876543211',
+    email: 'info@livingword.com',
+    timing: '10:00 AM - 11:30 AM, 6:00 PM - 7:30 PM',
+    members: 320,
+    image: '✝️',
+    featured: true,
+  },
+  {
+    id: 3,
+    name: 'New Life Prayer Center',
+    location: 'Kukatpally, Hyderabad',
+    address: '789 Praise Avenue, Kukatpally',
+    phone: '+91-9876543212',
+    email: 'contact@newlifeprayer.com',
+    timing: '8:30 AM - 10:00 AM, 4:30 PM - 6:00 PM',
+    members: 280,
+    image: '🙏',
+    featured: true,
+  },
+  {
+    id: 4,
+    name: 'Mount Zion Ministries',
+    location: 'Kompally, Hyderabad',
+    address: '22 Zion Road, Kompally',
+    phone: '+91-9876543213',
+    email: 'info@mountzion.com',
+    timing: '9:30 AM - 11:00 AM, 5:30 PM - 7:00 PM',
+    members: 190,
+    image: '⛪',
+    featured: false,
+  },
+];
+
+export const matrimonyProfiles = [
+  {
+    id: 1,
+    name: 'Priya Sharma',
+    age: 26,
+    location: 'Hyderabad',
+    denomination: 'Baptist',
+    image: '👩',
+    occupation: 'Software Engineer',
+    bio: 'Devoted Christian, loves worship music and mission work',
+  },
+  {
+    id: 2,
+    name: 'Anjali Krishna',
+    age: 24,
+    location: 'Bangalore',
+    denomination: 'Pentecostal',
+    image: '👩',
+    occupation: 'Teacher',
+    bio: 'Bible believer, passionate about community service',
+  },
+  {
+    id: 3,
+    name: 'Deepa Raj',
+    age: 27,
+    location: 'Vijayawada',
+    denomination: 'Methodist',
+    image: '👩',
+    occupation: 'Doctor',
+    bio: 'Faith-driven professional, enjoys fellowship and prayer',
+  },
+];
